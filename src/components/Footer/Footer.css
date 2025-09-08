@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: url("../../fonts/Quicksand-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand-Light";
+  src: url("../../vendor/fonts/Quicksand-Light.ttf") format("truetype");
+}
+
+.footer {
+  font-family: "Quicksand-Regular", sans-serif;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  flex-direction: column;
+
+  font-size: 12px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}

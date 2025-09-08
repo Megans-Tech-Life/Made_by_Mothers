@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: url("../../fonts/Quicksand-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pacifico-Regular";
+  src: url("../../vendor/fonts/Pacifico-Regular.ttf") format("truetype");
+}
+
+.header {
+  background-image: url("");
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header__nav-list {
+  font-family: "Quicksand-Regular", sans-serif;
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  list-style: none;
+}
+
+.header__nav-list li {
+  margin-right: 24px;
+}
+.header__nav-list li:last-child {
+  margin-right: 0;
+}
+
+.header__nav-list a {
+  color: #f88379;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.header__nav-list button {
+  color: #f88379;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+}
+
+.header__nav-list a:hover,
+.header__nav-list button:hover {
+  background-color: #fbb0a9;
+}
+
+.header__nav-list button:hover {
+  background-color: #fbb0a9;
+}
+
+.header__logo {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.header__title {
+  font-family: "Quicksand-SemiBold", sans-serif;
+  font-size: 40px;
+  color: #333;
+}
+
+.header__title-accent {
+  color: #f88379;
+  font-family: "Pacifico-Regular", cursive;
+}
+
+@media screen and (max-width: 767px) {
+  .header__nav-list {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .header__nav-list li {
+    margin-right: 12px;
+    margin-bottom: 16px;
+  }
+
+  .header__nav-list li:last-child {
+    margin-right: 12px;
+  }
+
+  .header__logo {
+    height: 150px;
+  }
+  .header__title {
+    font-size: 32px;
+    margin-left: 32px;
+  }
+  .header__title-accent {
+    font-size: 32px;
+    margin-left: 5px;
+  }
+}
