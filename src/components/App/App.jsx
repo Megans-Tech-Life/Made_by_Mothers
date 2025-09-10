@@ -11,6 +11,15 @@ import RegisterModal from "../RegisterModal/RegisterModal";
 import EditProfileModal from "../EditProfileModal/EditProfileModal.jsx";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
+import Banana from "../../images/FoodCardImages/banana.oat.jpg";
+import Apple from "../../images/FoodCardImages/apple.rice.jpg";
+import Salmon from "../../images/FoodCardImages/salmon.carrot.jpg";
+import Avocado from "../../images/FoodCardImages/avocado.pea.jpg";
+import Chicken from "../../images/FoodCardImages/chicken.zucchini.jpg";
+import Broccoli from "../../images/FoodCardImages/broccoli.potatos.jpg";
+import Fruit from "../../images/FoodCardImages/fruit.yogurt.jpg";
+import Peaches from "../../images/FoodCardImages/peaches.cream.jpg";
+
 function App() {
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -19,8 +28,91 @@ function App() {
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   const [isEditProfileOpen, setIsEditProfileOpen] = useState(false);
 
-  const [recipes, setRecipes] = useState([]); // Fetched later
-  const [visibleCount, setVisibleCount] = useState(3);
+  const [recipes, setRecipes] = useState([
+    {
+      image: Banana,
+      mealType: "Breakfast",
+      title: "Banana Oats Mash",
+      ingredients: [
+        "1 ripe banana",
+        "2 tbsp oats",
+        "Splash of breast milk, formula, or water",
+      ],
+    },
+    {
+      image: Apple,
+      mealType: "Breakfast",
+      title: "Apple Cinnamon Rice Cereal",
+      ingredients: [
+        "1/2 apple",
+        "1/4 cup rice cereal",
+        "1/3 cup breast milk, formula, or water",
+        "A pinch of cinnamon",
+      ],
+    },
+    {
+      image: Salmon,
+      mealType: "Lunch",
+      title: "Salmon Carrot Puree",
+      ingredients: [
+        "1/2 cup cooked salmon",
+        "1 cooked carrot",
+        "Splash of breast milk, formula, or water",
+      ],
+    },
+    {
+      image: Avocado,
+      mealType: "Lunch",
+      title: "Avocado Pea Mash",
+      ingredients: [
+        "1 ripe avocado",
+        "1/2 cup cooked peas",
+        "Squash of lemon juice(just for freshness) ",
+      ],
+    },
+    {
+      image: Chicken,
+      mealType: "Dinner",
+      title: "Chicken Zucchini Mash",
+      ingredients: [
+        "2 tbsp cooked chicken",
+        "1/2 cup cooked zucchini",
+        "Splash of low sodium chicken broth, or water",
+      ],
+    },
+    {
+      image: Broccoli,
+      mealType: "Dinner",
+      title: "Broccoli Potato Puree",
+      ingredients: [
+        "1/2 cup cooked broccoli",
+        "1/2 cup cooked potato",
+        "Drizzle of olive oil",
+      ],
+    },
+    {
+      image: Fruit,
+      mealType: "Snack",
+      title: "Fruit Yogurt Swirl(great frozen too!)",
+      ingredients: [
+        "1/2 cup plain whole milk yogurt",
+        "1/2 cup mixed berries",
+        "1 tbsp honey (optional)",
+      ],
+    },
+    {
+      image: Peaches,
+      mealType: "Snack",
+      title: "Peach and Cream Puree",
+      ingredients: [
+        "1 ripe peach",
+        "1/2 cup plain whole milk yogurt",
+        "1/2 tsp vanilla extract (optional)",
+      ],
+    },
+  ]);
+
+  const [visibleCount, setVisibleCount] = useState(2);
 
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -79,7 +171,7 @@ function App() {
   };
 
   const loadMoreRecipes = () => {
-    setVisibleCount((prev) => prev + 3);
+    setVisibleCount((prev) => prev + 2);
   };
 
   return (

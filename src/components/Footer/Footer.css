@@ -8,16 +8,20 @@
   src: url("../../vendor/fonts/Quicksand-Light.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Pacifico-Regular";
+  src: url("../../vendor/fonts/Pacifico-Regular.ttf") format("truetype");
+}
 .footer {
   font-family: "Quicksand-Regular", sans-serif;
-  display: flex;
-  max-width: 100%;
-  align-items: center;
-  flex-direction: column;
+  background: url("../../images/Banner-btm.png") no-repeat center bottom;
+  background-size: cover;
+  clip-path: ellipse(100% 75% at 50% 85%);
 
-  font-size: 12px;
-  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 40px 24px;
+  color: #fff;
+  text-align: center;
   box-sizing: border-box;
 }

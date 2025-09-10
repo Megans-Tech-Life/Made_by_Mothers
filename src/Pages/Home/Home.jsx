@@ -1,3 +1,4 @@
+import React from "react";
 import "./Home.css";
 import FoodCard from "../../components/FoodCard/FoodCard";
 
@@ -9,7 +10,9 @@ function Home({ recipes, allRecipes, onLoadMore }) {
         <p className="home__subtitle">
           Discover wholesome, easy-to-make recipes crafted by mothers for
           growing babies. Each recipe includes complete nutrition analysis to
-          help you make informed choices.{" "}
+          help you make informed choices. Because every spoonful should be
+          filled with love, care, and the support of a community that
+          understands your journey.{" "}
         </p>
       </div>
 
