@@ -6,11 +6,10 @@ import "./index.css";
 import App from "./components/App/App.jsx";
 
 const isProd = import.meta.env.MODE === "production";
-const basename = isProd ? "/Made_by_Mothers-frontend" : undefined;
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouter basename={basename}>
+    <HashRouter>
       <App />
     </HashRouter>
   </StrictMode>

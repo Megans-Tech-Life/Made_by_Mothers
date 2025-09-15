@@ -27,6 +27,7 @@ import Chicken from "../../images/FoodCardImages/chicken.zucchini.jpg";
 import Broccoli from "../../images/FoodCardImages/broccoli.potatos.jpg";
 import Fruit from "../../images/FoodCardImages/fruit.yogurt.jpg";
 import Peaches from "../../images/FoodCardImages/peaches.cream.jpg";
+
 import NutritionModal from "../NutritionModal/NutritionModal.jsx";
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
 
   const [recipes] = useState([
     {
-      image: Banana,
+      image: <img src={Banana} alt="Banana Oats Mash" />,
       mealType: "Breakfast",
       title: "Banana Oats Mash",
       ingredients: [
@@ -54,7 +55,7 @@ function App() {
       ],
     },
     {
-      image: Apple,
+      image: <img src={Apple} alt="Apple Cinnamon Rice Cereal" />,
       mealType: "Breakfast",
       title: "Apple Cinnamon Rice Cereal",
       ingredients: [
@@ -65,7 +66,7 @@ function App() {
       ],
     },
     {
-      image: Salmon,
+      image: <img src={Salmon} alt="Salmon Carrot Puree" />,
       mealType: "Lunch",
       title: "Salmon Carrot Puree",
       ingredients: [
@@ -75,7 +76,7 @@ function App() {
       ],
     },
     {
-      image: Avocado,
+      image: <img src={Avocado} alt="Avocado Pea Mash" />,
       mealType: "Lunch",
       title: "Avocado Pea Mash",
       ingredients: [
@@ -85,7 +86,7 @@ function App() {
       ],
     },
     {
-      image: Chicken,
+      image: <img src={Chicken} alt="Chicken Zucchini Mash" />,
       mealType: "Dinner",
       title: "Chicken Zucchini Mash",
       ingredients: [
@@ -95,7 +96,7 @@ function App() {
       ],
     },
     {
-      image: Broccoli,
+      image: <img src={Broccoli} alt="Broccoli Potato Puree" />,
       mealType: "Dinner",
       title: "Broccoli Potato Puree",
       ingredients: [
@@ -105,7 +106,7 @@ function App() {
       ],
     },
     {
-      image: Fruit,
+      image: <img src={Fruit} alt="Fruit Yogurt Swirl" />,
       mealType: "Snack",
       title: "Fruit Yogurt Swirl(great frozen too!)",
       ingredients: [
@@ -115,7 +116,7 @@ function App() {
       ],
     },
     {
-      image: Peaches,
+      image: <img src={Peaches} alt="Peach and Cream Puree" />,
       mealType: "Snack",
       title: "Peach and Cream Puree",
       ingredients: [

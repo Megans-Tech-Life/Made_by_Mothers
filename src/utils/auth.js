@@ -1,8 +1,10 @@
 import { mockAuth, mockLoginResponse, mockRegisterResponse } from "./mockData";
 
 const USE_MOCK = import.meta.env.VITE_APP_USE_MOCK_DATA === "true";
-export const authBaseUrl =
-  import.meta.env.VITE_AUTH_API_BASE_URL || "http://localhost:3001";
+
+export const authBaseUrl = USE_MOCK
+  ? ""
+  : import.meta.env.VITE_AUTH_API_BASE_URL || "http://localhost:3001";
 
 const login = async (email, password) => {
   if (USE_MOCK) {
@@ -70,4 +72,4 @@ const checkToken = async (token) => {
   }
 };
 
-export { login, register, checkToken };
+export { login, register, checkToken, USE_MOCK };

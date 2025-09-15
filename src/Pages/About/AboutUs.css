@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Quicksand-Regular";
-  src: url("fonts/Quicksand-Regular.ttf") format("truetype");
+  src: url("/fonts/Quicksand-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Pacifico-Regular";
-  src: url("fonts/Pacifico-Regular.ttf") format("truetype");
+  src: url("/fonts/Pacifico-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Quicksand-SemiBold";
-  src: url("fonts/Quicksand-SemiBold.ttf") format("truetype");
+  src: url("/fonts/Quicksand-SemiBold.ttf") format("truetype");
 }
 
 .about {
@@ -25,7 +25,8 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   margin-bottom: 32px;
-  background: url("../../images/Banner-top.png") no-repeat center/cover;
+  background: url("/Made_by_Mothers-frontend/images/Banner-top.png") no-repeat
+    center/cover;
   clip-path: ellipse(100% 75% at 50% 15%);
   color: #fff; /* adjust for contrast */
   padding: 50px 20px;

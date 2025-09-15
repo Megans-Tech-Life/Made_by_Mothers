@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Quicksand-Regular";
-  src: url("fonts/Quicksand-Regular.ttf") format("truetype");
+  src: url("/fonts/Quicksand-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Pacifico-Regular";
-  src: url("fonts/Pacifico-Regular.ttf") format("truetype");
+  src: url("/fonts/Pacifico-Regular.ttf") format("truetype");
 }
 
 .profile {

@@ -1,23 +1,23 @@
 @font-face {
   font-family: "Quicksand-Regular";
-  src: url("fonts/Quicksand-Regular.ttf") format("truetype");
+  src: url("/fonts/Quicksand-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Quicksand-Light";
-  src: url("fonts/Quicksand-Light.ttf") format("truetype");
+  src: url("/fonts/Quicksand-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Pacifico-Regular";
-  src: url("fonts/Pacifico-Regular.ttf") format("truetype");
+  src: url("/fonts/Pacifico-Regular.ttf") format("truetype");
 }
 
 .footer {
   font-family: "Quicksand-Regular", sans-serif;
-  background: url("images/Banner-btm.png") no-repeat center bottom;
+  background: url("/Banner-btm.png") no-repeat center bottom;
   background-size: cover;
   clip-path: ellipse(100% 75% at 50% 85%);
 
