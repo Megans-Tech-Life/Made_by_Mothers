@@ -10,10 +10,10 @@ The web application features **8 homemade recipes** along with their ingredients
 
 - React (Frontend)
 - React Router (Routing)
-- CSS / Styled Components (Figma)
+- CSS / Styled Components (Styled with Figma designs)
 - Nutritionix API (for nutrition data)
-- MockData(for stubbing API responses)
-- JWT tokens (for authentication for Logged in users)
+- MockData (for stubbing API responses)
+- JWT tokens (for user authentication)
 
 ---
 
@@ -21,7 +21,7 @@ The web application features **8 homemade recipes** along with their ingredients
 
 - 👶 8 homemade baby food recipes
 - 📊 Nutrition facts fetched via Nutritionix API
-- ❤️ Add/remove recipes from favorites on the users profile(saved to localStorage or backend)
+- ❤️ Add/remove recipes from favorites on the users profile (saved to localStorage)
 - 👤 User authentication (Register/Login) with token storage
 - 📝 Editable profile (name, email, photo upload option)
 - 📱 Fully responsive design for desktop and mobile
@@ -36,12 +36,15 @@ The web application features **8 homemade recipes** along with their ingredients
 
 ## 🌐 Deployment
 
-- **Frontend Repo**: [Made_by_Mothers-frontend](https://github.com/mgracej91/Made_by_Mothers-frontend.git)
+- **Frontend Repo**: [Made_by_Mothers-frontend]
+  https://mgracej91.github.io/Made_by_Mothers-frontend/
 
 ---
 
 ## 🧩 Challenges I Faced but Overcame
 
-One of the biggest challenges I faced during this project was keeping users logged in after a page refresh. At first, the login worked, but as soon as the page reloaded, the user was logged out. This made the app frustrating to use since it required logging in over and over.
+One of the biggest challenges I faced was getting the Nutritionix API to work correctly with my app. At first, every call I made to the API came back with an “Unauthorized” error, even though I had my key and endpoint set up.
 
-I solved this by finding a way to “remember” the user’s login information in the browser. To do so I stored the login details securely in the browser using local storage. When the page reloads, the app checks that stored information and restores the user’s session automatically.
+I overcame this by carefully reviewing the API documentation and testing different configurations. I realized that the API required very specific headers which included both an App ID and an API Key in every request. Once I updated my fetch function to include those headers, the requests worked successfully.
+
+This process taught me how important it is to slow down, check the small details in documentation, and test systematically until I find the issue.

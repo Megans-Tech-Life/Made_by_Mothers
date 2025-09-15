@@ -24,7 +24,6 @@ function Home({
       </div>
 
       <div className="food-card-container">
-        {/* FoodCard components will be rendered here */}
         {recipes.map((recipe, index) => (
           <FoodCard
             key={index}
