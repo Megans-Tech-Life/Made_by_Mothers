@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Quicksand-Regular";
-  src: url("../../fonts/Quicksand-Regular.ttf") format("truetype");
+  src: url("fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 .nutrition-modal {

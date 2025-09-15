@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Quicksand-Regular";
-  src: url("path/to/quicksand-regular.ttf") format("truetype");
+  src: url("fonts/Quicksand-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Pacifico-Regular";
-  src: url("path/to/pacifico-regular.ttf") format("truetype");
+  src: url("fonts/Pacifico-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Quicksand-SemiBold";
-  src: url("path/to/quicksand-semibold.ttf") format("truetype");
+  src: url("fonts/Quicksand-SemiBold.ttf") format("truetype");
 }
 
 .about {
