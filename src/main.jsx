@@ -1,14 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { HashRouterRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import "./index.css";
 import App from "./components/App/App.jsx";
 
+const isProd = import.meta.env.MODE === "production";
+const basename = isProd ? "/Made_by_Mothers-frontend" : undefined;
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouterRouter basename="/Made_by_Mothers-frontend">
+    <HashRouter basename={basename}>
       <App />
-    </HashRouterRouter>
+    </HashRouter>
   </StrictMode>
 );
