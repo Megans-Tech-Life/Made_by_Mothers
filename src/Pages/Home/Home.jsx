@@ -2,7 +2,14 @@ import React from "react";
 import "./Home.css";
 import FoodCard from "../../components/FoodCard/FoodCard";
 
-function Home({ recipes, allRecipes, onLoadMore }) {
+function Home({
+  recipes,
+  allRecipes,
+  onLoadMore,
+  onAddFavorite,
+  onRemoveFavorite,
+  favorites,
+}) {
   return (
     <section className="home">
       <div className="home__heading">
@@ -19,7 +26,13 @@ function Home({ recipes, allRecipes, onLoadMore }) {
       <div className="food-card-container">
         {/* FoodCard components will be rendered here */}
         {recipes.map((recipe, index) => (
-          <FoodCard key={index} {...recipe} />
+          <FoodCard
+            key={index}
+            {...recipe}
+            favorites={favorites}
+            onAddFavorite={onAddFavorite}
+            onRemoveFavorite={onRemoveFavorite}
+          />
         ))}
       </div>
 

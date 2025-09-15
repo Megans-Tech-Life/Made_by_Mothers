@@ -1,10 +1,17 @@
 import "./EditProfileModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const EditProfileModal = ({ isOpen, onClose, onUpdateProfile }) => {
+const EditProfileModal = ({ isOpen, onClose, onUpdateProfile, user }) => {
   const [name, setName] = useState("");
   const [photoUrl, setPhotoUrl] = useState("");
+
+  useEffect(() => {
+    if (isOpen && user) {
+      setName(user.name || "");
+      setPhotoUrl(user.photoUrl || "");
+    }
+  }, [isOpen, user]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

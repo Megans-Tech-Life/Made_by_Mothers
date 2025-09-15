@@ -1,19 +1,27 @@
 import React, { useState } from "react";
 import EditProfileModal from "../../components/EditProfileModal/EditProfileModal";
 import "./Profile.css";
+import Avatar from "../../images/profile.avatar.jpg";
+import FoodCard from "../../components/FoodCard/FoodCard";
 
-function Profile({ user, onLogout }) {
+function Profile({ user, favorites = [], onLogout, onUpdateProfile }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
 
   return (
     <div className="profile">
       <div className="profile-container">
-        <h1>Welcome to your Profile</h1>
+        <h1 className="profile__title">Welcome</h1>
 
         <div className="profile__info">
           <div className="profile__avatar">
-            {/* Placeholder for user avatar */}
-            <img src={user?.photoUrl} alt={user?.name} />
+            <img
+              src={
+                user?.photoUrl && user.photoUrl.trim() !== ""
+                  ? user.photoUrl
+                  : Avatar
+              }
+              alt={user?.name || "Default Avatar"}
+            />
           </div>
           <div className="profile__name">
             <h2>{user?.name}</h2>
@@ -25,18 +33,20 @@ function Profile({ user, onLogout }) {
             </button>
           </div>
         </div>
-        <div className="profile__favorites">
+        <div className="profile__favorites-title">
           <h2>Your Favorite Recipes</h2>
-          {user?.favorites && user.favorites.length > 0 ? (
-            <ul>
-              {user.favorites.map((recipe, index) => (
+          {favorites && favorites.length > 0 ? (
+            <div className="food-card-container">
+              {favorites.map((recipe, index) => (
                 <FoodCard key={index} {...recipe} />
               ))}
-            </ul>
+            </div>
           ) : (
-            <div>
-              <p>No favorite recipes yet.</p>
-              <p>
+            <div className="profile__favorites-added">
+              <p className="profile__favorites-message">
+                No favorite recipes yet.
+              </p>
+              <p className="profile__favorites-invite">
                 Start exploring our delicious baby food recipes and save your
                 favorites by clicking the heart icon!
               </p>
@@ -49,7 +59,8 @@ function Profile({ user, onLogout }) {
         <EditProfileModal
           isOpen={isEditOpen}
           onClose={() => setIsEditOpen(false)}
-          onUpdateProfile={(data) => console.log("Updated profile:", data)}
+          onUpdateProfile={onUpdateProfile}
+          user={user}
         />
       </div>
     </div>
