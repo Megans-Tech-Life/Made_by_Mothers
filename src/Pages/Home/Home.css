@@ -25,17 +25,16 @@
 .home__heading {
   font-family: "Quicksand-Regular", sans-serif;
   font-size: 20px;
+  background-color: #f88379;
   margin: 16px 0 8px 0;
   padding: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url("/Banner-top.png") no-repeat center/cover;
-  clip-path: ellipse(100% 75% at 50% 15%);
-  color: #fff;
   padding: 50px 20px;
   text-align: center;
+  clip-path: ellipse(100% 75% at 50% 15%);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }

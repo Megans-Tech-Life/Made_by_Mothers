@@ -67,6 +67,7 @@ const mockLoginResponse = {
     name: "Test User",
     email: "testuser@example.com",
   },
+  token: "mock-jwt-token-123456",
 };
 
 const mockRegisterResponse = {
@@ -75,6 +76,7 @@ const mockRegisterResponse = {
     name: "New User",
     email: "newuser@example.com",
   },
+  token: "mock-jwt-token-123456",
 };
 
 export {

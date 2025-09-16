@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import FoodCard from "../../components/FoodCard/FoodCard";
+import BannerTop from "../../images/Banner-top.png";
 
 function Home({
   recipes,
@@ -12,7 +13,10 @@ function Home({
 }) {
   return (
     <section className="home">
-      <div className="home__heading">
+      <div
+        className="home__heading"
+        style={{ backgroundImage: `url(${BannerTop})` }}
+      >
         <h2 className="home__title">Homemade Baby Food</h2>
         <p className="home__subtitle">
           Discover wholesome, easy-to-make recipes crafted by mothers for

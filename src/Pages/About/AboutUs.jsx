@@ -11,7 +11,7 @@ function AboutUs() {
     <div className="about">
       <section
         className="about__section"
-        style={{ background: `url(${BannerTop}) no-repeat center/cover` }}
+        style={{ backgroundImage: `url(${BannerTop})` }}
       >
         <h1 className="about__section-title">Our Story</h1>
         <p className="about__section-intro">
