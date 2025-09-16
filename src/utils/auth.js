@@ -8,7 +8,19 @@ export const authBaseUrl = USE_MOCK
 
 const login = async (email, password) => {
   if (USE_MOCK) {
-    return mockLoginResponse;
+    // Always return the last registered user, or a default
+    const stored = localStorage.getItem("mockUser");
+    let user;
+    if (stored) {
+      user = JSON.parse(stored);
+    } else {
+      user = { name: "Demo User", email: "demo@example.com" };
+    }
+    return {
+      success: true,
+      user,
+      token: "mock-jwt-token-123456",
+    };
   }
   try {
     const response = await fetch(`${authBaseUrl}/login`, {
@@ -30,7 +42,14 @@ const login = async (email, password) => {
 
 const register = async (name, email, password) => {
   if (USE_MOCK) {
-    return mockRegisterResponse;
+    // Save the registered user to localStorage
+    const user = { name, email };
+    localStorage.setItem("mockUser", JSON.stringify(user));
+    return {
+      success: true,
+      user,
+      token: "mock-jwt-token-123456",
+    };
   }
   try {
     const response = await fetch(`${authBaseUrl}/register`, {

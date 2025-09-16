@@ -198,17 +198,9 @@ function App() {
       if (res.token) {
         localStorage.setItem("token", res.token);
         setIsLoggedIn(true);
-
-        const userObj = {
-          name: "Jane Doe",
-          email: email,
-          photoUrl: "",
-          favorites: [],
-        };
-
-        setUser(userObj);
+        setUser(res.user);
         localStorage.setItem("isLoggedIn", "true");
-        localStorage.setItem("user", JSON.stringify(userObj));
+        localStorage.setItem("user", JSON.stringify(res.user));
       }
       setIsLoginOpen(false);
     } catch (error) {
@@ -223,15 +215,9 @@ function App() {
       if (res.token) {
         localStorage.setItem("token", res.token);
         setIsLoggedIn(true);
-
-        const userObj = { name, email, photoUrl: "", favorites: [] };
-        setUser(userObj);
+        setUser(res.user);
         localStorage.setItem("isLoggedIn", "true");
-        localStorage.setItem("user", JSON.stringify(userObj));
-
-        if (res.token) {
-          localStorage.setItem("token", res.token);
-        }
+        localStorage.setItem("user", JSON.stringify(res.user));
       }
       setIsRegisterOpen(false);
     } catch (error) {
