@@ -4,11 +4,15 @@ import BabyFoodJars from "../../images/BabyFoodJars.jpg";
 import BabyWithFood from "../../images/BabyWithFood.jpg";
 import MomBaby from "../../images/Mom-Baby.jpg";
 import Sparkle from "../../images/Sparkle.png";
+import BannerTop from "../../images/Banner-top.png";
 
 function AboutUs() {
   return (
     <div className="about">
-      <section className="about__section">
+      <section
+        className="about__section"
+        style={{ background: `url(${BannerTop}) no-repeat center/cover` }}
+      >
         <h1 className="about__section-title">Our Story</h1>
         <p className="about__section-intro">
           Born from the love and dedication of mothers around the world, we are

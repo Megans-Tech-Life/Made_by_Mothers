@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url("../../images/Banner-top.png") no-repeat center/cover;
+  background: url("/Banner-top.png") no-repeat center/cover;
   clip-path: ellipse(100% 75% at 50% 15%);
   color: #fff;
   padding: 50px 20px;

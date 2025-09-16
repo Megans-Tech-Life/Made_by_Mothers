@@ -45,7 +45,7 @@ function App() {
 
   const [recipes] = useState([
     {
-      image: <img src={Banana} alt="Banana Oats Mash" />,
+      image: Banana,
       mealType: "Breakfast",
       title: "Banana Oats Mash",
       ingredients: [
@@ -55,7 +55,7 @@ function App() {
       ],
     },
     {
-      image: <img src={Apple} alt="Apple Cinnamon Rice Cereal" />,
+      image: Apple,
       mealType: "Breakfast",
       title: "Apple Cinnamon Rice Cereal",
       ingredients: [
@@ -66,7 +66,7 @@ function App() {
       ],
     },
     {
-      image: <img src={Salmon} alt="Salmon Carrot Puree" />,
+      image: Salmon,
       mealType: "Lunch",
       title: "Salmon Carrot Puree",
       ingredients: [
@@ -76,7 +76,7 @@ function App() {
       ],
     },
     {
-      image: <img src={Avocado} alt="Avocado Pea Mash" />,
+      image: Avocado,
       mealType: "Lunch",
       title: "Avocado Pea Mash",
       ingredients: [
@@ -86,7 +86,7 @@ function App() {
       ],
     },
     {
-      image: <img src={Chicken} alt="Chicken Zucchini Mash" />,
+      image: Chicken,
       mealType: "Dinner",
       title: "Chicken Zucchini Mash",
       ingredients: [
@@ -96,7 +96,7 @@ function App() {
       ],
     },
     {
-      image: <img src={Broccoli} alt="Broccoli Potato Puree" />,
+      image: Broccoli,
       mealType: "Dinner",
       title: "Broccoli Potato Puree",
       ingredients: [
@@ -106,7 +106,7 @@ function App() {
       ],
     },
     {
-      image: <img src={Fruit} alt="Fruit Yogurt Swirl" />,
+      image: Fruit,
       mealType: "Snack",
       title: "Fruit Yogurt Swirl(great frozen too!)",
       ingredients: [
@@ -116,7 +116,7 @@ function App() {
       ],
     },
     {
-      image: <img src={Peaches} alt="Peach and Cream Puree" />,
+      image: Peaches,
       mealType: "Snack",
       title: "Peach and Cream Puree",
       ingredients: [
