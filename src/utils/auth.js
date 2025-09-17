@@ -1,4 +1,4 @@
-import { mockAuth, mockLoginResponse, mockRegisterResponse } from "./mockData";
+import { mockAuth } from "./mockData";
 
 const USE_MOCK = import.meta.env.VITE_APP_USE_MOCK_DATA === "true";
 
@@ -8,7 +8,6 @@ export const authBaseUrl = USE_MOCK
 
 const login = async (email, password) => {
   if (USE_MOCK) {
-    // Always return the last registered user, or a default
     const stored = localStorage.getItem("mockUser");
     let user;
     if (stored) {
@@ -42,7 +41,6 @@ const login = async (email, password) => {
 
 const register = async (name, email, password) => {
   if (USE_MOCK) {
-    // Save the registered user to localStorage
     const user = { name, email };
     localStorage.setItem("mockUser", JSON.stringify(user));
     return {
