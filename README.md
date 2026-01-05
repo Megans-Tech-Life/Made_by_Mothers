@@ -1,55 +1,104 @@
-# 👩‍👩‍👧 Made_by_Mothers
+# 👩‍👩‍👧 Made by Mothers – Baby Food Recipe App
 
-This custom-built project was made to provide parents with homemade baby food recipes and highlight the benefits of making nutritious meals for their little ones.
+Made by Mothers is a frontend React application designed to help parents explore homemade baby food recipes with clear nutrition information and a simple, family-friendly user experience.
 
-The web application features **8 homemade recipes** along with their ingredients, nutrition facts, and interactive features for a user-friendly experience.
-
----
+The app highlights the benefits of preparing nutritious meals at home and demonstrates frontend skills including API integration, authentication flows, and responsive UI design.
 
 ## 🚀 Tech Stack
 
-- React (Frontend)
-- React Router (Routing)
-- CSS / Styled Components (Styled with Figma designs)
-- Nutritionix API (for nutrition data)
-- MockData (for stubbing API responses)
-- JWT tokens (for user authentication)
+- React
 
----
+- React Router
+
+- CSS / Styled Components (based on Figma designs)
+
+- Nutritionix API (nutrition data)
+
+- MockData (for development and testing)
+
+- JWT authentication (token-based login)
 
 ## ✨ Key Features
 
 - 👶 8 homemade baby food recipes
-- 📊 Nutrition facts fetched via Nutritionix API
-- ❤️ Add/remove recipes from favorites on the users profile (saved to localStorage)
-- 👤 User authentication (Register/Login) with token storage
-- 📝 Editable profile (name, email, photo upload option)
-- 📱 Fully responsive design for desktop and mobile
 
-- **Nutrition Modal**  
-  ![Screenshot of nutrition modal](<Screenshot 2025-09-13 172006.png>)
+- 📊 Nutrition facts fetched from the Nutritionix API
 
-- **Profile Page**
-  ![Screenshot of profile page](<Screenshot 2025-09-13 173856.png>)
+- ❤️ Add / remove favorite recipes (persisted via localStorage)
 
----
+- 👤 User authentication (Register / Login)
 
-## 🌐 Deployment
+- 📝 Editable user profile (name, email, photo upload option)
 
-**Frontend Repo**: [Made_by_Mothers-frontend]
+- 📱 Fully responsive design (desktop & mobile)
 
-- GitHub Pages
-  https://github.com/Megans-Tech-Life/Made_by_Mothers-frontend
+## UI Highlights
 
-- Locally
-  http://localhost:3001
+### Nutrition Modal
+![Nutrition modal](nutrition-modal.png)
 
----
+#### Profile Page
+![Profile page](profile-page.png)
 
-## 🧩 Challenges I Faced but Overcame
+## 🧑‍💻 Getting Started (Local Development)
 
-One of the biggest challenges I faced was getting the Nutritionix API to work correctly with my app. At first, every call I made to the API came back with an “Unauthorized” error, even though I had my key and endpoint set up.
+### Follow these steps to run the project locally.
 
-I overcame this by carefully reviewing the API documentation and testing different configurations. I realized that the API required very specific headers which included both an App ID and an API Key in every request. Once I updated my fetch function to include those headers, the requests worked successfully.
+1. Clone the repository
+```bash
+git clone https://github.com/Megans-Tech-Life/Made_by_Mothers-frontend.git
+cd Made_by_Mothers-frontend
+```
 
-This process taught me how important it is to slow down, check the small details in documentation, and test systematically until I find the issue.
+2️. Install dependencies
+```bash
+npm install
+```
+
+3️. Environment Variables
+
+**Create a .env file in the project root and add your Nutritionix credentials:**
+
+- REACT_APP_NUTRITIONIX_APP_ID=your_app_id
+- REACT_APP_NUTRITIONIX_API_KEY=your_api_key
+
+
+⚠️ Nutritionix requires both an App ID and API Key to be sent in request headers.
+
+4️. Start the development server
+```bash
+npm start
+```
+
+**The app will be available at:**
+
+http://localhost:3001
+
+🌐 Deployment
+
+This project is deployed using GitHub Pages.
+
+Repository
+https://github.com/Megans-Tech-Life/Made_by_Mothers-frontend
+
+If redeploying:
+```bash
+npm run build
+npm run deploy
+```
+
+*Ensure the homepage field is correctly set in package.json before deploying.*
+
+## 🧩 Challenges & What I Learned
+
+One of the biggest challenges was integrating the Nutritionix API.
+Initial requests consistently returned 401 Unauthorized errors despite having valid credentials.
+
+After carefully reviewing the documentation and testing requests incrementally, I discovered that Nutritionix requires specific request headers containing both an App ID and API Key. Once those headers were included correctly, the integration worked as expected.
+
+This experience reinforced the importance of:
+
+- closely reading API documentation
+- validating request structure
+- debugging methodically instead of guessing
+
