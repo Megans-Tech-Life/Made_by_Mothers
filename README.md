@@ -36,10 +36,10 @@ The web application features **8 homemade recipes** along with their ingredients
 
 ## 🌐 Deployment
 
-**Frontend Repo**: [Made_by_Mothers]
+**Frontend Repo**: [Made_by_Mothers-frontend]
 
 - GitHub Pages
-  https://mgracej91.github.io/Made_by_Mothers/
+  https://github.com/Megans-Tech-Life/Made_by_Mothers-frontend
 
 - Locally
   http://localhost:3001
