@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mgracej91.github.io/Made_by_Mothers-frontend/",
+  "homepage": "https://megans-tech-life.github.io/Made_by_Mothers-frontend/",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
