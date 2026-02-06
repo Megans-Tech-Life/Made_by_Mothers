@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: url("/fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand-SemiBold";
+  src: url("/fonts/Quicksand-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.food-card {
+  font-family: "Quicksand-Regular", sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 260px;
+  min-height: 390px;
+  max-width: 100%;
+}
+
+.food-card__image {
+  width: 100%;
+  height: 140px;
+  max-width: 100%;
+  max-height: 160px;
+  border-radius: 0;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+.food-card__title {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.food-card__mealType {
+  font-size: 12px;
+  color: #fff;
+  background-color: #fbb0a9;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.food-card__ingredients {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.food-card__sparkle {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ccc;
+  transition: color 0.3s ease, transform 0.2s ease;
+  margin-top: 16px;
+}
+
+.like-button:hover {
+  color: #fbb7b1;
+  transform: scale(1.1);
+}
+
+.like-button.liked {
+  color: #f88379;
+  transform: scale(1.2);
+}
+
+.nutrition-button {
+  font-family: "Quicksand-SemiBold", sans-serif;
+  color: #f88379;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 32px auto 0 auto;
+}
+
+.nutrition-info {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}

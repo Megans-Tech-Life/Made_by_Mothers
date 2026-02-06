@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: url("/fonts/Quicksand-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pacifico-Regular";
+  src: url("/fonts/Pacifico-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand-SemiBold";
+  src: url("/fonts/Quicksand-SemiBold.ttf") format("truetype");
+}
+
+.about {
+  max-width: 100vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.about__section {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 32px;
+  clip-path: ellipse(100% 75% at 50% 15%);
+  color: #fff; /* adjust for contrast */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about__section-title {
+  font-family: "Quicksand-Regular", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.about__section-intro {
+  font-family: "Quicksand-Regular", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.about__image {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  margin: 0 auto 24px auto;
+  border-radius: 20px;
+}
+
+.about__list {
+  font-family: "Quicksand-Regular", sans-serif;
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+  margin: 0 auto 24px auto;
+}
+
+.about__list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.about__list-icon {
+  width: 30px;
+  height: 30px;
+}

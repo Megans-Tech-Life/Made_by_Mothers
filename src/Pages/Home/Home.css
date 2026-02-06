@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Quicksand-SemiBold";
+  src: url("/fonts/Quicksand-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: url("/fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.home__heading {
+  font-family: "Quicksand-Regular", sans-serif;
+  font-size: 20px;
+  background-color: #f88379;
+  margin: 16px 0 8px 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+  clip-path: ellipse(100% 75% at 50% 15%);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.home__title {
+  margin: 0;
+  color: #fff;
+}
+
+.home__subtitle {
+  font-family: "Quicksand-Regular", sans-serif;
+  font-size: 20px;
+  margin: 8px 0 0 0;
+  color: #fff;
+}
+
+.food-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px 0;
+}
+
+.load-more-btn {
+  font-family: "Quicksand-Regular", sans-serif;
+  padding: 10px 20px;
+  height: 40px;
+  width: 250px;
+  margin: 24px auto;
+  font-size: 16px;
+  color: #fff;
+  background-color: #f88379;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #fbb7b1;
+}
